@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Birthday Card</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+
+        body {
+
+            /* add background image start*/
+            background: 
+                        url('/background\ image.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+
+                        /* add background image start*/
+        }
+
+/* cracker animation start */
+
+        .cracker {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100px; /* Adjust height as needed */
+            background-image: url('/cracker-removebg-preview.png'); /* Replace with your cracker image */
+            
+            background-size: contain;
+            animation: cracker-fall 5s linear infinite; /* Adjust animation duration */
+          }
+          
+          @keyframes cracker-fall {
+            0% {
+              transform: translateY(-100px);
+            }
+            100% {
+              transform: translateY(100vh); /* Move cracker down the entire viewport height */
+            }
+          }
+
+/* cracker animation ends */
+
+/* card css start*/
+        .card {
+            width: 40rem;
+            height: 36rem;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            background-color: #eeeff0;
+            padding-top: 20px;
+            background-image: url('/birthday.jpg');
+        }
+        .card:hover {
+            transform: scale(1.05);
+            background-color: #b37a7a;
+           
+        }
+       
+
+        .card-img-top  {
+            height: 180px;
+            width: 70%;
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            animation: slide 3s infinite;
+           
+        }
+/*medie queary for all text and imgages start*/
+        @media (max-width:499px) {
+            .container-center{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding-bottom: 20px;
+            }
+            
+        }
+        /*medie queary for all text and imgages ends*/
+        .card{
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title{
+            color: white;
+            text-align: center;
+            font-size: 30px; /* Increase the size as needed */
+        }
+
+        @media (max-width: 575px) {
+            .card-title {
+                font-size: 24px; /* Increased font size for screens 575px or smaller */
+                text-align: center;
+                padding-left: 20px;
+            }
+        }
+
+        .card-text{
+            color:white;
+            text-align: center;
+            font-size: 20px; /* Increase the size as needed */
+           
+        }
+        @media (max-width:575px){
+            .card-text{
+                font-size:20px;
+                text-align: center; 
+            }
+        }
+
+/* card css ends*/
+
+      /* animation for card image start 
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(10px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+         animation for card image ends */
+    </style>
+</head>
+<body>
+     <!-- Cracker animation start-->
+  <div class="cracker">
+    
+  </div>
+   <!-- Cracker animation ends-->
+
+<!-- main container start -->
+
+    <div class="container-center" >
+        <div class="card p-3" >
+            <div class="cracker">
+    
+            </div>
+            <h5 class="card-title" >HAPPY BIRTHDAY</h5>
+            <img src="/cute-baby-girl.avif" class="card-img-top mt-3" alt="..." style="box-shadow: 0px 4px 8px rgba(39, 38, 38, 0.1); border: 2px solid #ccc; display: block; margin: 0 auto; border-radius: 50%; width: 200px; height: 200px; object-fit: cover;">
+            <div class="card-body mt-5">
+               <h5 class="card-title">Join us to celebrate Olivia's 3rd birthday !</h5>
+                <p class="card-text">Saturday, October 17th at 2 p.m. 123<br> Anywhere St.,Any City, ST 12345</p>
+                <p class="card-text mt-5 mb-5">RSVP to Lillian Pratt(Carey's Mom)<br>123-456-7890</p>
+            </div>
+        </div>
+    </div>
+<!-- main container ends -->
+
+</body>
+</html>
